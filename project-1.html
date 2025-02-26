@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Showcase</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff; /* Light pastel blue */
+            text-align: center;
+            padding: 20px;
+        }
+        .container {
+            max-width: 900px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+        .project-title {
+            cursor: pointer;
+            font-size: 20px;
+            font-weight: bold;
+            margin: 10px 0;
+            padding: 10px;
+            background: #007BFF;
+            color: white;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+        .project-title:hover {
+            background: #0056b3;
+        }
+        .project-content {
+            display: none;
+            text-align: left;
+            padding: 15px;
+            border-radius: 5px;
+            background: #ffffff;
+            margin-top: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .project1 { background-color: #ffddcc; } /* Light coral */
+        .project2 { background-color: #d4edda; } /* Light green */
+        .project3 { background-color: #cce5ff; } /* Light blue */
+        .home-btn {
+            background: #ff5733;
+            color: white;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+            margin-top: 20px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .home-btn:hover {
+            background: #cc4626;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Project Showcase</h1>
+        
+        <div class="project-title" onclick="showProject('project1')">M-Queens Game on an N × N Board</div>
+        <div id="project1" class="project-content project1">
+            <h2>M-Queens Game on an N × N Board</h2>
+            <p><b>Why did I choose this project?</b></p>
+            <p>This project was chosen because it provides a fascinating challenge in **Artificial Intelligence** by implementing constraint satisfaction solutions. 
+               It enhances problem-solving skills and is applicable in various fields such as **robotics, scheduling, and optimization problems**.</p>
+            
+            <p><b>Advantages:</b></p>
+            <ul>
+                <li>Develops **AI-based problem-solving skills**.</li>
+                <li>Enhances understanding of **constraint satisfaction problems (CSP)**.</li>
+                <li>Can be extended to **real-world applications** like scheduling and logistics.</li>
+                <li>Provides insights into **backtracking, heuristics, and optimization techniques**.</li>
+            </ul>
+
+            <p><b>Future Scope:</b></p>
+            <ul>
+                <li>Integration with **machine learning** to improve performance.</li>
+                <li>Application in **large-scale optimization problems** in various industries.</li>
+                <li>Development of **interactive games** for chess problem-solving.</li>
+                <li>Extending the problem to **3D chessboards** for advanced simulations.</li>
+            </ul>
+        </div>
+        
+        <div class="project-title" onclick="showProject('project2')">To-Do List Application</div>
+        <div id="project2" class="project-content project2">
+            <h2>To-Do List Application</h2>
+            <p><b>Why did I choose this project?</b></p>
+            <p>A **To-Do List Application** is a practical tool that helps users efficiently manage tasks, improving organization and productivity. 
+               This project provides hands-on experience in **Java, HTML, and CSS**, covering essential CRUD operations.</p>
+
+            <p><b>Advantages:</b></p>
+            <ul>
+                <li>Helps users efficiently **organize tasks and manage time**.</li>
+                <li>Provides hands-on experience in **full-stack development**.</li>
+                <li>Can be extended with **notifications, reminders, and cloud synchronization**.</li>
+                <li>Simple and **user-friendly interface** for better accessibility.</li>
+            </ul>
+
+            <p><b>Future Scope:</b></p>
+            <ul>
+                <li>Integration with **AI-based task prioritization**.</li>
+                <li>Cross-platform availability on **mobile and web applications**.</li>
+                <li>**Voice command** support for hands-free task management.</li>
+                <li>Collaboration features for **team-based task sharing**.</li>
+            </ul>
+        </div>
+        
+        <div class="project-title" onclick="showProject('project3')">AI-Based Fake Review Detection</div>
+        <div id="project3" class="project-content project3">
+            <h2>AI-Based Fake Review Detection</h2>
+            <p><b>Why did I choose this project?</b></p>
+            <p>Fake reviews undermine trust in **e-commerce platforms**, misleading customers. This project was chosen to develop a **robust AI model** 
+               using deep learning and **aspect-based sentiment analysis** to accurately detect fraudulent reviews.</p>
+
+            <p><b>Advantages:</b></p>
+            <ul>
+                <li>Improves **accuracy** in detecting fake reviews.</li>
+                <li>Uses **deep learning models with hierarchical attention mechanisms**.</li>
+                <li>Enhances **stability** through a cardinality fusion model.</li>
+                <li>Can be applied to **multiple domains** like social media and news verification.</li>
+            </ul>
+
+            <p><b>Future Scope:</b></p>
+            <ul>
+                <li>Integration with **real-time e-commerce platforms**.</li>
+                <li>Expansion to detect **fake news and misinformation**.</li>
+                <li>Incorporating **blockchain technology** for immutable review authenticity.</li>
+                <li>Improving **multi-language support** for global applications.</li>
+            </ul>
+        </div>
+
+        <!-- Home Button at the Bottom Center -->
+        <button class="home-btn" onclick="goHome()">Home</button>
+    </div>
+    
+    <script>
+        function showProject(projectId) {
+            let projects = document.querySelectorAll('.project-content');
+            projects.forEach(project => project.style.display = 'none');
+            document.getElementById(projectId).style.display = 'block';
+        }
+
+        function goHome() {
+            window.location.href = "index.html"; // Change this to your actual home page URL
+        }
+    </script>
+</body>
+</html>
